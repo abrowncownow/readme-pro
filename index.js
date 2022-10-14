@@ -108,7 +108,6 @@ function getData() {
 async function handleAnswer(){
     const spinner = createSpinner('Beep. Boop.. Processing...').start();
     await sleep();
-    console.log(data);
     readMe = generateMarkdown(data, name);
     spinner.success({ text: `Good job me!`});
     await sleep();

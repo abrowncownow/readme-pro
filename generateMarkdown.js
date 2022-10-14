@@ -38,8 +38,8 @@ const licenseData = [{
   description: `
   Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`
-},
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+`},
 
 
 ]
@@ -75,55 +75,51 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   renderLicenseBadge(data.license);
   return `
-  # ${data.title}
-  ${badge}
-  ## Description
+# ${data.title}
+${badge}
+## Description
 
-  ${data.description}
+${data.description}
 
-  ## Table of Contents
+## Table of Contents
 
-  Use the links below to navigate to different sections of the README.
+Use the links below to navigate to different sections of the README.
 
-  -   [Installation](#installation)
-  -   [Usage](#usage)
-  -   [License](#license)
-  -   [Contributing](#contributing)
-  -   [Tests](#tests)
-  -   [Questions](#questions)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [License](#license)
+-   [Contributing](#contributing)
+-   [Tests](#tests)
+-   [Questions](#questions)
 
-  ## Installation
+## Installation
 
-  ${data.installation}
+${data.installation}
 
-  ## Usage
+## Usage
 
-  ${data.usage}
+${data.usage}
 
-  ## License
-  ${badge}
+## License
+${badge}
 
-  Copyright 2022 ${data.name}
+Copyright 2022 ${data.name}
 
-  ${licenseData[index].description}
+${licenseData[index].description}
 
-  ## Contributing
+## Contributing
 
-  ${data.contributing}
+${data.contributing}
 
-  ## Tests
+## Tests
 
-  ${data.tests}
+${data.tests}
 
-  ## Questions
-  
-  Check out my other github projects at: [@${data.github}](https://github.com/${data.github}).
-  
-  Or email me at [${data.email}](${data.email}) with any additional questions.
+## Questions
 
+Check out my other github projects at: [@${data.github}](https://github.com/${data.github}).
 
-
-
+Or email me at [${data.email}](${data.email}) with any additional questions.
 `;
 }
 
