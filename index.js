@@ -23,7 +23,7 @@ async function askName(){
         type: 'input',
         message: 'What is your name?',
         default() {
-            return 'Steve';
+            return 'human-name';
         },
     })
     name = answers.name;
@@ -38,10 +38,11 @@ async function welcome() {
     rainbowWelcome.stop();
 
     console.log(`
-        ${chalk.bgBlue('How to use this tool:')}
-        Answer the questions regarding your project.
-        I will digest all of your weak answers.
-        I will then poop out a beautiful readeMe.md file for you to plagiarize.
+        ${chalk.green.bgBlack.bold('How to use this tool:')}
+        ${chalk.green.bgBlack('Answer the questions regarding your project.')}
+        ${chalk.green.bgBlack('I will digest all of your weak answers.')}
+        ${chalk.green.bgBlack('I will then poop out a beautiful readeMe.md file for you to plagiarize.')}
+        
     `)
 }
 
@@ -62,34 +63,44 @@ function getData() {
             },
             {
                 type: "input",
-                message: "What is your favorite hobby?",
+                message: "Write instructions for installation:",
                 name: "installation",
             },
             {
                 type: "input",
-                message: "What is your LinkedIn username?",
+                message: "Describe the steps necessary to use your project:",
                 name: "usage",
+            },
+            {
+                type: "input",
+                message: `Credit your contributors (${chalk.red.bgBlack("don't forget me!")}):`,
+                name: "contributing",
+            },
+            {
+                type: "input",
+                message: "Test instructions:",
+                name: "tests",
             },
             {
                 type: "list",
                 message: "Choose a license",
-                choices: ["none", "MIT", "Something Else"],
+                choices: ["none", "MIT", "Apache 2.0", "ISC"],
                 name: "license",
             },
             {
                 type: "input",
-                message: "What is your LinkedIn username?",
-                name: "tests",
+                message: "What is your GitHub username?",
+                name: "github",
             },
             {
                 type: "input",
-                message: "What is your GitHub username?",
-                name: "questions",
+                message: "What is your email address?",
+                name: "email",
             },
         ])
         .then((answers) => {
             data = answers;
-            console.log(data);
+            data.name = name;
             handleAnswer();
         });
 }
@@ -97,19 +108,26 @@ function getData() {
 async function handleAnswer(){
     const spinner = createSpinner('Beep. Boop.. Processing...').start();
     await sleep();
-    readMe = generateMarkdown(data);
+    console.log(data);
+    readMe = generateMarkdown(data, name);
     spinner.success({ text: `Good job me!`});
     await sleep();
-    await winner();
+    await results();
 }
-async function winner(){
+async function results(){
     console.clear();
     const msg = `Congrats, ${name}!\nYou made a Pro ReadMe!`;
     figlet(msg, (err,data) => {
         console.log(gradient.pastel.multiline(data));
     });
     await sleep();
-    console.log(readMe);
+    await sleep();
+    console.log(chalk.green.bgBlack.bold("Raw readme.md:"))
+    console.log(chalk.green.bgBlack(readMe));
+    await sleep();
+    await sleep();
+    await sleep();
+    process.exit(0);
 }
 function init(){
       
