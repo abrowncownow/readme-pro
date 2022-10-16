@@ -21,7 +21,7 @@ async function askName(){
     const answers = await inquirer.prompt({
         name: 'name',
         type: 'input',
-        message: 'What is your name?',
+        message: 'What is your full name?',
         default() {
             return 'human-name';
         },
@@ -53,7 +53,7 @@ function getData() {
         .prompt([
             {
                 type: "input",
-                message: "What is the title of your project?",
+                message: `What is the ${chalk.bold("title")} of your project?`,
                 name: "title",
             },
             {
@@ -78,7 +78,7 @@ function getData() {
             },
             {
                 type: "input",
-                message: "Test instructions:",
+                message: "Describe how to test your project:",
                 name: "tests",
             },
             {
