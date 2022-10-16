@@ -84,7 +84,7 @@ function getData() {
             {
                 type: "list",
                 message: "Choose a license",
-                choices: ["none", "MIT", "Apache 2.0", "ISC"],
+                choices: ["none", "MIT", "Apache 2.0", "ISC", "BSD 3-Clause", "BSD 2-Clause", "Creative Commons v0 1.0"],
                 name: "license",
             },
             {
@@ -109,6 +109,7 @@ async function handleAnswer(){
     const spinner = createSpinner('Beep. Boop.. Processing...').start();
     await sleep();
     readMe = generateMarkdown(data, name);
+    writeReadme();
     spinner.success({ text: `Good job me!`});
     await sleep();
     await results();
@@ -125,17 +126,18 @@ async function results(){
     console.log(chalk.green.bgBlack(readMe));
     await sleep();
     await sleep();
-    await sleep();
     process.exit(0);
 }
-function init(){
-      
+function writeReadme(){
+    fs.writeFile(`./generated_readmes/${data.title}_readme.md`, readMe, (err) =>
+    err ? console.error(err) : console.log('Success!')
+   );
 }
 //declare functions
 
 //Readme 
 
-//init
+//main
 await askName();
 await welcome();
 await getData();
