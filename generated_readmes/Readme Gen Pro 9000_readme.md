@@ -3,13 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
 
-  Readme Gen Pro 9000 is a MIT licensed open-source command-line interface (CLI) tool designed to guide users through the process of creating clean and professional readmes like the one you are reading. 
-
-  - Repo available at [Readme-Pro](https://github.com/abrowncownow/readme-pro)
-
-## Video Demonstration:
-
-[![Watch the video](https://img.youtube.com/vi/V2aOzY80wJo/default.jpg)](https://youtu.be/V2aOzY80wJo)
+  Readme Gen Pro 9000 is a MIT licensed open-source command-line interface (CLI) tool designed to guide users through the process of creating clean and professional readmes like the one you are reading.
 
 ## Table of Contents
 
