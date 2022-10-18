@@ -28,7 +28,7 @@
 
 ## Usage
 
-  Upon running Readme Gen Pro 9000, you will be promted to provide details regarding your project. Answer the prompts thoroughly for a detailed final readme! Optional- you may enter raw markup language for an improved experience. Once all of the prompts are completed, a "ProjectTitle_readme.md" will be created in the ./generated_readmes directory. You can create multiple readmes by changing the the title inputted during the prompts. If you re-use the same title, the same-named "ProjectTitle_reademe.md" in ./generated_readmes will over-written.
+  Upon running Readme Gen Pro 9000, you will be promted to provide details regarding your project. Answer the prompts thoroughly for a detailed final readme! Optional- you may enter raw markup language for an improved experience. Once all of the prompts are completed, a "ProjectTitle_readme.md" will be created in the ./generated_readmes directory. You can create multiple readmes by changing the title entered during the prompts. If you re-use the same title, the same-named reademe in ./generated_readmes will be over-written.
 
 ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
