@@ -31,7 +31,7 @@ async function askName(){
 
 async function welcome() {
     const rainbowWelcome = chalkAnimation.rainbow(
-        `${name}, Welcome to the ReadMe Gen Pro 9000! \n`
+        `${name}, Welcome to the Readme Gen Pro 9000! \n`
     );
 
     await sleep();
@@ -68,7 +68,7 @@ function getData() {
             },
             {
                 type: "input",
-                message: "Describe the steps necessary to use your project:",
+                message: "Describe how to use your project:",
                 name: "usage",
             },
             {
@@ -122,7 +122,7 @@ async function results(){
     });
     await sleep();
     await sleep();
-    console.log(chalk.green.bgBlack.bold("Raw readme.md:"))
+    console.log(chalk.green.bgBlack.bold(`Here is the contents of ${data.title}_readme.md:`))
     console.log(chalk.green.bgBlack(readMe));
     await sleep();
     await sleep();
