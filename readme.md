@@ -7,7 +7,7 @@
 
   - Repo available at [Readme-Pro](https://github.com/abrowncownow/readme-pro)
 
-## Video Demonstration:
+## Video Demonstration
 
 [![Watch the video](https://img.youtube.com/vi/V2aOzY80wJo/default.jpg)](https://youtu.be/V2aOzY80wJo)
 
