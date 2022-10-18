@@ -9,7 +9,7 @@
 
 ## Video Demonstration
 
-[![Watch the video](https://img.youtube.com/vi/V2aOzY80wJo/default.jpg)](https://youtu.be/V2aOzY80wJo)
+[![Watch the video](https://img.youtube.com/vi/V2aOzY80wJo/0.jpg)](https://youtu.be/V2aOzY80wJo)
 
 ## Table of Contents
 
