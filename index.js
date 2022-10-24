@@ -108,12 +108,19 @@ function getData() {
 async function handleAnswer(){
     const spinner = createSpinner('Beep. Boop.. Processing...').start();
     await sleep();
-    readMe = generateMarkdown(data, name);
+    readMe = generateMarkdown(data);
     writeReadme();
     spinner.success({ text: `Good job me!`});
     await sleep();
     await results();
 }
+
+function writeReadme(){
+    fs.writeFile(`./generated_readmes/${data.title}_readme.md`, readMe, (err) =>
+    err ? console.error(err) : console.log('Success!')
+   );
+}
+
 async function results(){
     console.clear();
     const msg = `Congrats, ${name}!\nYou made a Pro ReadMe!`;
@@ -128,14 +135,8 @@ async function results(){
     await sleep();
     process.exit(0);
 }
-function writeReadme(){
-    fs.writeFile(`./generated_readmes/${data.title}_readme.md`, readMe, (err) =>
-    err ? console.error(err) : console.log('Success!')
-   );
-}
 //declare functions
 
-//Readme 
 
 //main
 await askName();

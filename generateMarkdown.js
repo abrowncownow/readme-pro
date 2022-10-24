@@ -81,8 +81,6 @@ You can copy, modify, distribute and perform the work, even for commercial purpo
 - Unless expressly stated otherwise, the person who associated a work with this deed makes no warranties about the work, and disclaims liability for all uses of the work, to the fullest extent permitted by applicable law.
 - When using or citing the work, you should not imply endorsement by the author or the affirmer.
 `},
-
-
 ]
 
 var badge;
@@ -109,7 +107,6 @@ function renderLicense(license) {
   badge = licenseData[index].badge;
 }
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   renderLicense(data.license);
   return `
